@@ -1,0 +1,16 @@
+import { Navbar } from "@/components/navbar"
+import { PastChampionsSection } from "@/components/past-champions-section"
+import { Footer } from "@/components/footer"
+
+
+export default function PastChampionsPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <PastChampionsSection />
+      </main>
+      <Footer />
+    </>
+  );
+}

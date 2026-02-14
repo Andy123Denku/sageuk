@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function AboutHero() {
   return (
@@ -17,7 +17,7 @@ export function AboutHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 pt-16 text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-          About SAGE Global
+          About SAGE UK
         </p>
         <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
           Empowering the Next Generation of{" "}
@@ -29,5 +29,5 @@ export function AboutHero() {
         </p>
       </div>
     </section>
-  )
+  );
 }

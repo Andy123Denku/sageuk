@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Users, GraduationCap, Briefcase } from "lucide-react"
+import Link from "next/link";
+import { Users, GraduationCap, Briefcase } from "lucide-react";
 
 const cards = [
   {
@@ -7,10 +7,7 @@ const cards = [
     icon: Users,
     title: "For Teens",
     description: "Learn how you can compete at the national level.",
-    buttons: [
-      { label: "USA Competition", href: "#", variant: "solid" as const },
-      { label: "Contact Us", href: "#", variant: "outline" as const },
-    ],
+    buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
   },
   {
     number: 2,
@@ -18,21 +15,23 @@ const cards = [
     title: "For Educators",
     description:
       "Support your students by starting a SAGE Entrepreneurship Club.",
-    buttons: [
-      { label: "Contact Us", href: "#", variant: "solid" as const },
-    ],
+    buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
   },
   {
     number: 3,
     icon: Briefcase,
-    title: "For Business Leaders",
-    description:
-      "Help us by volunteering to judge at our next competition!",
-    buttons: [
-      { label: "Contact Us", href: "#", variant: "solid" as const },
-    ],
+    title: "University Mentors",
+    description: "Supports sudents on their entrepreneurship journey",
+    buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
   },
-]
+  {
+    number: 4,
+    icon: Briefcase,
+    title: "For Business Leaders",
+    description: "Help us by volunteering to judge at our next competition!",
+    buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
+  },
+];
 
 export function GetInvolvedSection() {
   return (
@@ -41,7 +40,7 @@ export function GetInvolvedSection() {
         {/* Banner */}
         <div className="mb-16 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
-            From Local Businesses to Global Recognition
+            From Local Businesses to UK Recognition
           </p>
           <h2 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl text-balance">
             How to Get <span className="text-primary">Involved</span>
@@ -101,5 +100,5 @@ export function GetInvolvedSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

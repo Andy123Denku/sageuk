@@ -11,7 +11,7 @@ export function UsaWinnersSection() {
             <div className="h-72 w-72 overflow-hidden rounded-full shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96">
               <Image
                 src="/images/usa-winners.jpg"
-                alt="2025 SAGE USA Competition winners celebrating with trophy"
+                alt="2026 SAGE United Kindom Competition winners celebrating with trophy"
                 width={400}
                 height={400}
                 className="h-full w-full object-cover"

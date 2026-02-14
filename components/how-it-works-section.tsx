@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { Rocket, Award, Globe } from "lucide-react"
+import Image from "next/image";
+import { Rocket, Award, Globe } from "lucide-react";
 
 const steps = [
   {
@@ -18,9 +18,9 @@ const steps = [
     icon: Globe,
     title: "SAGE World Cup",
     description:
-      "The top two teams from each country are invited to the annual SAGE World Cup. This global event allows students to present their businesses on an international stage, connect with industry leaders, and network with fellow teenage entrepreneurs from around the world. The World Cup combines competition with cultural exchange, fostering collaboration and inspiring the next generation of global leaders.",
+      "The top two teams from each country are invited to the annual SAGE World Cup. This UK event allows students to present their businesses on an international stage, connect with industry leaders, and network with fellow teenage entrepreneurs from around the world. The World Cup combines competition with cultural exchange, fostering collaboration and inspiring the next generation of UK leaders.",
   },
-]
+];
 
 export function HowItWorksSection() {
   return (
@@ -41,9 +41,9 @@ export function HowItWorksSection() {
               the guidance of their teachers and mentors. The preparation for
               SAGE competitions, from local events to the prestigious SAGE World
               Cup, helps students refine their business models, develop
-              real-world skills, and gain confidence. By working through the SAGE
-              process, teens transform their initial ideas into impactful
-              businesses, ready to compete on national and global stages.
+              real-world skills, and gain confidence. By working through the
+              SAGE process, teens transform their initial ideas into impactful
+              businesses, ready to compete on national and UK stages.
             </p>
 
             {/* Steps */}
@@ -66,9 +66,9 @@ export function HowItWorksSection() {
             </div>
 
             <p className="mt-10 text-lg leading-relaxed text-muted-foreground">
-              Through this process, SAGE participants gain invaluable experience,
-              building both their businesses and the skills necessary to make
-              lasting impacts on their communities and beyond.
+              Through this process, SAGE participants gain invaluable
+              experience, building both their businesses and the skills
+              necessary to make lasting impacts on their communities and beyond.
             </p>
           </div>
 
@@ -87,5 +87,5 @@ export function HowItWorksSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

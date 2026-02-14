@@ -17,13 +17,13 @@ export function UsaCompetitionHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 pt-16 text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-          Welcome USA teenage entrepreneurs!
+          Welcome United Kindom teenage entrepreneurs!
         </p>
         <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-          SAGE USA <span className="text-primary">Competition</span>
+          SAGE United Kindom <span className="text-primary">Competition</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          The SAGE USA National Competition is where teenage entrepreneurs from
+          The SAGE United Kindom National Competition is where teenage entrepreneurs from
           across the country showcase their businesses and compete for a chance
           to represent the United States at the prestigious SAGE World Cup. Join
           us as we celebrate innovation, creativity, and real-world impact driven

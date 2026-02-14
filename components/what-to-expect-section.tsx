@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const judgingCriteria = [
   "Business Model",
@@ -7,7 +7,7 @@ const judgingCriteria = [
   "Innovation",
   "Sustainability",
   "Presentation Quality",
-]
+];
 
 export function WhatToExpectSection() {
   return (
@@ -36,7 +36,7 @@ export function WhatToExpectSection() {
               Empowering Teens, Creating Real Change
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              SAGE Global competitions empower teenage entrepreneurs to create
+              SAGE UK competitions empower teenage entrepreneurs to create
               businesses that tackle urgent social and environmental issues.
               Whether at the local, national, or international level,
               participants are evaluated on their ability to make a real impact.
@@ -70,5 +70,5 @@ export function WhatToExpectSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

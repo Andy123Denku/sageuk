@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react"
+import { Quote } from "lucide-react";
 
 export function SeizeFutureSection() {
   return (
@@ -10,7 +10,7 @@ export function SeizeFutureSection() {
             Seize your <span className="text-primary">FUTURE</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Join a global community of young innovators making a lasting impact
+            Join a UK community of young innovators making a lasting impact
             through entrepreneurship, mentorship, and real-world experience.
           </p>
         </div>
@@ -32,5 +32,5 @@ export function SeizeFutureSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

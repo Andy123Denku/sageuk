@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { Heart } from "lucide-react"
+import Link from "next/link";
+import { Heart } from "lucide-react";
 
 const sponsors = [
   {
     name: "EY (Ernst & Young)",
     tier: "Platinum",
     description:
-      "Global leader in assurance, tax, transaction, and advisory services supporting SAGE's entrepreneurship programs.",
+      "UK leader in assurance, tax, transaction, and advisory services supporting SAGE's entrepreneurship programs.",
   },
   {
     name: "KPMG",
@@ -30,7 +30,7 @@ const sponsors = [
     name: "Junior Achievement",
     tier: "Silver",
     description:
-      "Collaborating with SAGE to expand access to financial literacy and work-readiness programs globally.",
+      "Collaborating with SAGE to expand access to financial literacy and work-readiness programs UKly.",
   },
   {
     name: "World Bank Group",
@@ -38,17 +38,20 @@ const sponsors = [
     description:
       "Partnering on initiatives that connect youth entrepreneurship with sustainable development goals.",
   },
-]
+];
 
 const tierColors: Record<string, string> = {
   Platinum: "bg-primary/10 text-primary",
   Gold: "bg-accent/10 text-accent",
   Silver: "bg-muted-foreground/10 text-muted-foreground",
-}
+};
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="scroll-mt-20 bg-background py-20 lg:py-28">
+    <section
+      id="sponsors"
+      className="scroll-mt-20 bg-background py-20 lg:py-28"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -60,7 +63,7 @@ export function SponsorsSection() {
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             We are grateful to the organizations that invest in youth
-            entrepreneurship and help make SAGE's global programs possible.
+            entrepreneurship and help make SAGE's UK programs possible.
           </p>
         </div>
 
@@ -73,7 +76,9 @@ export function SponsorsSection() {
             >
               {/* Tier badge */}
               <span
-                className={`mb-4 inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-semibold ${tierColors[sponsor.tier]}`}
+                className={`mb-4 inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-semibold ${
+                  tierColors[sponsor.tier]
+                }`}
               >
                 {sponsor.tier} Partner
               </span>
@@ -110,5 +115,5 @@ export function SponsorsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

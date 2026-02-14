@@ -1,4 +1,4 @@
-import { Target, Eye, Lightbulb, Globe } from "lucide-react"
+import { Target, Eye, Lightbulb, Globe } from "lucide-react";
 
 const values = [
   {
@@ -9,11 +9,11 @@ const values = [
   },
   {
     icon: Globe,
-    title: "Global Impact",
+    title: "UK Impact",
     description:
       "Our programs connect young entrepreneurs across 30+ countries, fostering cross-cultural collaboration and understanding.",
   },
-]
+];
 
 export function MissionVisionSection() {
   return (
@@ -30,11 +30,11 @@ export function MissionVisionSection() {
               Our <span className="text-primary">Mission</span>
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              SAGE Global is dedicated to empowering teenagers around the world
-              to develop entrepreneurial skills through the creation of real
-              businesses that address urgent social issues. We believe that young
-              people have the power to drive meaningful, lasting change in their
-              communities and beyond.
+              SAGE UK is dedicated to empowering teenagers around the world to
+              develop entrepreneurial skills through the creation of real
+              businesses that address urgent social issues. We believe that
+              young people have the power to drive meaningful, lasting change in
+              their communities and beyond.
             </p>
           </div>
 
@@ -48,10 +48,10 @@ export function MissionVisionSection() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
               We envision a world where every young person has the opportunity,
-              resources, and mentorship to turn innovative ideas into sustainable
-              enterprises. Through global collaboration, we aim to build a
-              generation of socially-conscious leaders who reshape industries and
-              uplift communities worldwide.
+              resources, and mentorship to turn innovative ideas into
+              sustainable enterprises. Through UK collaboration, we aim to build
+              a generation of socially-conscious leaders who reshape industries
+              and uplift communities worldwide.
             </p>
           </div>
         </div>
@@ -84,5 +84,5 @@ export function MissionVisionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

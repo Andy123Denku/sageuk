@@ -1,12 +1,12 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/hero.jpg"
+        src="/images/img/1.jpeg"
         alt=""
         fill
         className="object-cover"
@@ -30,5 +30,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

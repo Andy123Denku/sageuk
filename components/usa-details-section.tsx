@@ -1,13 +1,20 @@
-import { CalendarDays, Mail, CheckCircle2, Clock, Trophy, HelpCircle } from "lucide-react"
+import {
+  CalendarDays,
+  Mail,
+  CheckCircle2,
+  Clock,
+  Trophy,
+  HelpCircle,
+} from "lucide-react";
 
 const details = [
   {
     icon: CheckCircle2,
-    text: "After submitting the outreach form, you will receive a confirmation email from SAGE Global.",
+    text: "After submitting the outreach form, you will receive a confirmation email from SAGE UK.",
   },
   {
     icon: CalendarDays,
-    text: "To sign up for a time slot, your Annual Report must be submitted by May 2nd, 2025.",
+    text: "To sign up for a time slot, your Annual Report must be submitted by May 2nd, 2026.",
   },
   {
     icon: Clock,
@@ -15,9 +22,9 @@ const details = [
   },
   {
     icon: Trophy,
-    text: "Results for SAGE USA will be announced on our Instagram page and this webpage on May 23.",
+    text: "Results for SAGE United Kindom will be announced on our Instagram page and this webpage on May 23.",
   },
-]
+];
 
 export function UsaDetailsSection() {
   return (
@@ -61,7 +68,7 @@ export function UsaDetailsSection() {
                 href="mailto:shooker@sageglobal.org"
                 className="text-primary underline-offset-4 transition-colors hover:underline"
               >
-                shooker@sageglobal.org
+                shooker@sageUK.org
               </a>
               .
             </p>
@@ -69,5 +76,5 @@ export function UsaDetailsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

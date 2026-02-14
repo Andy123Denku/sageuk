@@ -1,21 +1,23 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const competitionLinks = [
   { label: "Competition Overview", href: "/competition" },
-  { label: "USA Competition", href: "/competition/usa" },
+  { label: "National Competition", href: "/competition/usa" },
   { label: "World Cup Competition", href: "/competition/world-cup" },
   { label: "Resources", href: "#" },
-]
+];
 
 const aboutLinks = [
   { label: "Our Mission", href: "/about#mission" },
   { label: "Our Team", href: "/about#team" },
   { label: "Sponsors", href: "/about#sponsors" },
-]
+];
 
 function DropdownMenu({
   label,
@@ -23,21 +25,23 @@ function DropdownMenu({
   isOpen,
   onToggle,
 }: {
-  label: string
-  links: { label: string; href: string }[]
-  isOpen: boolean
-  onToggle: () => void
+  label: string;
+  links: { label: string; href: string }[];
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
   return (
     <div className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+        className="flex items-center gap-1 text-muted-foreground hover:text-black transition-colors text-sm font-medium"
         aria-expanded={isOpen}
       >
         {label}
         <ChevronDown
-          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className={`h-4 w-4 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
         />
       </button>
       {isOpen && (
@@ -54,33 +58,36 @@ function DropdownMenu({
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 bg-white right-0 z-50 transition-all duration-300`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-foreground tracking-wide">
-            SAGE
+          {/* ✅ Logo Image */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logp.jpg"
+              alt="Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -90,7 +97,9 @@ export function Navbar() {
               links={competitionLinks}
               isOpen={openDropdown === "competition"}
               onToggle={() =>
-                setOpenDropdown(openDropdown === "competition" ? null : "competition")
+                setOpenDropdown(
+                  openDropdown === "competition" ? null : "competition"
+                )
               }
             />
             <DropdownMenu
@@ -101,15 +110,21 @@ export function Navbar() {
                 setOpenDropdown(openDropdown === "about" ? null : "about")
               }
             />
-            <Link
-              href="#"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            {/* <Link
+              href="/past-champions"
+              className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
             >
               Past Champions
+            </Link> */}
+            <Link
+              href="/programs"
+              className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
+            >
+              Programs
             </Link>
             <Link
               href="#"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
             >
               Contact Us
             </Link>
@@ -123,21 +138,19 @@ export function Navbar() {
             >
               Contribute
             </Link>
-            <Link
-              href="#"
-              className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              Log In
-            </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden text-foreground"
+            className="lg:hidden text-black"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -188,17 +201,11 @@ export function Navbar() {
                 >
                   Contribute
                 </Link>
-                <Link
-                  href="#"
-                  className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-                >
-                  Log In
-                </Link>
               </div>
             </div>
           </div>
         )}
       </nav>
     </header>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import Link from "next/link"
-import { FileText, Clock, Presentation, Package } from "lucide-react"
+import Link from "next/link";
+import { FileText, Clock, Presentation, Package } from "lucide-react";
 
 const requirements = [
   {
     icon: FileText,
     number: 1,
     title: "Written Annual Report:",
-    description: 'Limited to four (4) printed pages (8 \u00BD x 11)',
+    description: "Limited to four (4) printed pages (8 \u00BD x 11)",
     bullets: [
       {
         text: "Sample Annual Report Shown Here.",
@@ -21,7 +21,7 @@ const requirements = [
     description: "Presentations must not exceed 13 minutes.",
     bullets: [
       {
-        text: "A clear indication of the 12-minute mark (one minute warning) will be provided by SAGE Global.",
+        text: "A clear indication of the 12-minute mark (one minute warning) will be provided by SAGE UK.",
         href: null,
       },
     ],
@@ -56,7 +56,7 @@ const requirements = [
       },
     ],
   },
-]
+];
 
 export function UsaRequirementsSection() {
   return (
@@ -74,10 +74,10 @@ export function UsaRequirementsSection() {
 
         {/* Intro paragraph */}
         <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
-          For the SAGE USA National Competition, teams will participate in a
-          20-minute session designed to replicate an in-person experience,
-          consisting of a 13-minute live video presentation followed by a
-          7-minute Q&A session. While slides are encouraged, they are not
+          For the SAGE United Kindom National Competition, teams will
+          participate in a 20-minute session designed to replicate an in-person
+          experience, consisting of a 13-minute live video presentation followed
+          by a 7-minute Q&A session. While slides are encouraged, they are not
           required. Teams should follow these guidelines:
         </p>
 
@@ -133,5 +133,5 @@ export function UsaRequirementsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -12,7 +12,7 @@ export function WorldCupCtaBanner() {
             href="/2025-wc"
             className="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-xl"
           >
-            2025 World Cup
+            2026 World Cup
           </Link>
         </div>
       </div>

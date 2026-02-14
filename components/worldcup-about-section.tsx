@@ -1,4 +1,4 @@
-import { Globe, MapPin, Trophy } from "lucide-react"
+import { Globe, MapPin, Trophy } from "lucide-react";
 
 const blocks = [
   {
@@ -9,17 +9,17 @@ const blocks = [
   },
   {
     icon: Globe,
-    title: "A Global Tradition",
+    title: "A UK Tradition",
     content:
-      "Each year, we travel to a new country to host the SAGE World Cup, immersing participants in different cultures and providing a truly international experience. From South Africa to Ukraine, the United States to Japan, the competition unites young innovators on a global stage.",
+      "Each year, we travel to a new country to host the SAGE World Cup, immersing participants in different cultures and providing a truly international experience. From South Africa to Ukraine, the United States to Japan, the competition unites young innovators on a UK stage.",
   },
   {
     icon: MapPin,
-    title: "2025 World Cup",
+    title: "2026 World Cup",
     content:
-      "In 2025, Georgia will serve as the next host country, bringing together student entrepreneurs, judges, and mentors from 30+ nations for a competition like no other!",
+      "In 2026, Hanoi-Vietnam will serve as the next host country, bringing together student entrepreneurs, judges, and mentors from 30+ nations for a competition like no other!",
   },
-]
+];
 
 export function WorldCupAboutSection() {
   return (
@@ -31,9 +31,12 @@ export function WorldCupAboutSection() {
 
         <div className="mt-12 space-y-12">
           {blocks.map((block) => {
-            const Icon = block.icon
+            const Icon = block.icon;
             return (
-              <div key={block.title} className="flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
+              <div
+                key={block.title}
+                className="flex flex-col items-start gap-4 sm:flex-row sm:gap-6"
+              >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
@@ -46,10 +49,10 @@ export function WorldCupAboutSection() {
                   </p>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

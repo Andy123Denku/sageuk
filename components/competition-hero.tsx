@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function CompetitionHero() {
   return (
@@ -23,10 +23,11 @@ export function CompetitionHero() {
           Competition Overview
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          From local showcases to the global stage, SAGE competitions empower
-          teenage entrepreneurs to build real businesses and create lasting change.
+          From local showcases to the UK stage, SAGE competitions empower
+          teenage entrepreneurs to build real businesses and create lasting
+          change.
         </p>
       </div>
     </section>
-  )
+  );
 }

@@ -4,46 +4,46 @@ import Image from "next/image"
 
 const cards = [
   {
-    image: "/images/georgia-landmarks.jpg",
-    alt: "Gergeti Trinity Church in the Caucasus Mountains, Georgia",
-    title: "Iconic Landmarks",
+    image: "/images/vietnam-ha-long-bay.jpg",
+    alt: "Limestone karsts in Ha Long Bay, Vietnam",
+    title: "Iconic Landscapes",
     description:
-      "Did you know? Georgia is home to breathtaking sites like Gergeti Trinity Church, perched high in the Caucasus Mountains, offering stunning views and centuries of history.",
+      "Did you know? Vietnam is home to Ha Long Bay, a UNESCO World Heritage Site featuring thousands of limestone karsts rising dramatically from emerald waters.",
   },
   {
-    image: "/images/georgia-supra.jpg",
-    alt: "Traditional Georgian Supra feast with dishes and wine",
-    title: "Traditional Supra",
+    image: "/images/vietnam-street-food.jpg",
+    alt: "Vietnamese street food with pho and banh mi",
+    title: "World-Famous Cuisine",
     description:
-      "Did you know? A Georgian Supra is more than just a feast\u2014it's a time-honored tradition where a Tamada (toastmaster) leads heartfelt toasts, turning every meal into a shared experience of culture and connection.",
+      "Did you know? Vietnamese cuisine is celebrated worldwide for its fresh ingredients and bold flavors—from pho and banh mi to fresh spring rolls and rich Vietnamese coffee.",
   },
   {
-    image: "/images/georgia-baths.jpg",
-    alt: "Historic sulfur baths district in Tbilisi, Georgia",
-    title: "Excursions",
+    image: "/images/vietnam-hoi-an.jpg",
+    alt: "Lantern-lit streets of Hoi An, Vietnam",
+    title: "Cultural Experiences",
     description:
-      "Did you know? Tbilisi's historic sulfur baths have been a staple of relaxation for centuries, known for their natural healing properties and stunning mosaic interiors.",
+      "Did you know? The ancient town of Hoi An transforms each evening with glowing lanterns, reflecting Vietnam’s deep cultural heritage and centuries-old trading history.",
   },
   {
-    image: "/images/georgia-art.jpg",
-    alt: "Traditional Georgian folk dancers in national costumes",
-    title: "Art & History",
+    image: "/images/vietnam-traditions.jpg",
+    alt: "Traditional Vietnamese Ao Dai dress",
+    title: "Art & Tradition",
     description:
-      "Did you know? Georgia's rich history is reflected in its ancient frescoes, medieval manuscripts, and vibrant folk dances, each telling the story of a nation that has bridged cultures for centuries.",
+      "Did you know? Vietnam’s traditions shine through its elegant Ao Dai dress, water puppet theater, and vibrant festivals that celebrate community and history.",
   },
 ]
 
-export function WhyGeorgiaSection() {
+export function WhyVietnamSection() {
   return (
     <section className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-            Why Georgia?
+            Why Vietnam?
           </p>
           <h2 className="text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
-            Discover Georgia: Our 2025 Host Country
+            Discover Vietnam: Our 2026 Host Country
           </h2>
         </div>
 

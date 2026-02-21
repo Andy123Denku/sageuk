@@ -189,14 +189,20 @@ export function Navbar() {
                 Past Champions
               </Link>
               <Link
-                href="#"
+                href="/programs"
+                className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
+              >
+                Programs
+              </Link>
+              <Link
+                href="/contact"
                 className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Contact Us
               </Link>
               <div className="flex gap-3 px-3 pt-4">
                 <Link
-                  href="#"
+                  href="/contribute"
                   className="rounded-lg border border-primary/40 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
                 >
                   Contribute

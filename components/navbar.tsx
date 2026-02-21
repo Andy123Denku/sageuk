@@ -10,7 +10,7 @@ const competitionLinks = [
   { label: "Competition Overview", href: "/competition" },
   { label: "National Competition", href: "/competition/usa" },
   { label: "World Cup Competition", href: "/competition/world-cup" },
-  { label: "Resources", href: "#" },
+  // { label: "Resources", href: "#" },
 ];
 
 const aboutLinks = [
@@ -123,7 +123,7 @@ export function Navbar() {
               Programs
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
             >
               Contact Us
@@ -133,7 +133,7 @@ export function Navbar() {
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="#"
+              href="contribute"
               className="rounded-lg border border-primary/40 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
             >
               Contribute

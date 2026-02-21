@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 
 export function ContributeHero() {
   return (
-    <section className="relative flex min-h-[65vh] items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
         src="/images/img/5.jpg"
@@ -14,7 +14,7 @@ export function ContributeHero() {
         priority
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-background/78" />
+      <div className="absolute inset-0 bg-background/75" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 pt-16 text-center">

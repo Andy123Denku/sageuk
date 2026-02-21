@@ -190,7 +190,7 @@ export function Navbar() {
               </Link>
               <Link
                 href="/programs"
-                className="text-sm font-medium text-muted-foreground hover:text-black transition-colors"
+                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Programs
               </Link>

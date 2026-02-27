@@ -28,13 +28,13 @@ export function JourneySection() {
         {/* CTA buttons */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            href="#"
+            href="/competition"
             className="inline-block rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:scale-105"
           >
             Our Competitions
           </Link>
           <Link
-            href="#"
+            href="/contact"
             className="inline-block rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:scale-105"
           >
             Get Involved

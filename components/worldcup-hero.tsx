@@ -23,7 +23,7 @@ export function WorldCupHero() {
           2026 SAGE World Cup
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-primary font-semibold">
-          Hosted in the country of Vietnam!
+          Vietnam
         </p>
         <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
           Where the world's top teenage entrepreneurs compete on a global stage.

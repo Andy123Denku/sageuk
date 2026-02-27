@@ -12,10 +12,10 @@ export function RealBusinessSection() {
               Real <span className="text-primary">CHANGE</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              For over 20 years, SAGE UK has empowered teenage entrepreneurs to
+              For over 20 years, SAGE has empowered teenage entrepreneurs to
               create real businesses that address urgent social issues. Our
               network, active in over 30 countries on five continents, continues
-              to expand, fostering UK change through innovation.
+              to expand, fostering change through innovation.
             </p>
           </div>
 

@@ -22,11 +22,11 @@ export function UsaWinnersSection() {
           {/* Text */}
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
-              2025 SAGE USA <span className="text-primary">Winners</span>
+              Call for Entry 2026 SAGE National Competition
             </h2>
             <div className="mt-8">
               <Link
-                href="#"
+                href="https://docs.google.com/forms/u/2/d/1zI6yD14l4yPVQOxTYwUAi7j9Sll-SNUpzwg9_PlZdXw/edit"
                 className="inline-block rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-xl hover:scale-105"
               >
                 Click here!

@@ -7,12 +7,7 @@ const blocks = [
     content:
       "The SAGE World Cup is the ultimate showcase of teenage entrepreneurs from across the globe. Every year, young changemakers present real businesses creating real impact, competing for the title of the world's top student enterprise.",
   },
-  {
-    icon: Globe,
-    title: "A UK Tradition",
-    content:
-      "Each year, we travel to a new country to host the SAGE World Cup, immersing participants in different cultures and providing a truly international experience. From South Africa to Ukraine, the United States to Japan, the competition unites young innovators on a UK stage.",
-  },
+  
   {
     icon: MapPin,
     title: "2026 World Cup",

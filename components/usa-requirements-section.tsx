@@ -10,7 +10,7 @@ const requirements = [
     bullets: [
       {
         text: "Sample Annual Report Shown Here.",
-        href: "/resources",
+        href: "/resources/annualreport.pdf",
       },
     ],
   },
@@ -39,7 +39,7 @@ const requirements = [
       },
       {
         text: "Judging Rubric Shown Here.",
-        href: "/resources",
+        href: "https://www.sageglobal.org/_files/ugd/03f7ef_dc3e3e7326474a99baa74ddcf4161ee4.pdf",
       },
     ],
   },
@@ -74,7 +74,7 @@ export function UsaRequirementsSection() {
 
         {/* Intro paragraph */}
         <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
-          For the SAGE United Kindom National Competition, teams will
+          For the SAGE United Kingdom National Competition, teams will
           participate in a 20-minute session designed to replicate an in-person
           experience, consisting of a 13-minute live video presentation followed
           by a 7-minute Q&A session. While slides are encouraged, they are not

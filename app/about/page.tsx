@@ -20,7 +20,7 @@ export default function AboutPage() {
         <AboutHero />
         <MissionVisionSection />
         <TeamSection />
-        <SponsorsSection />
+        {/* <SponsorsSection /> */}
       </main>
       <Footer />
     </>

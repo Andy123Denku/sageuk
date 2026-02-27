@@ -13,13 +13,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+44 (0) 123 456 7890",
+    value: "07555085321",
     href: "tel:+441234567890",
   },
   {
     icon: MapPin,
     label: "Our Office",
-    value: "London, United Kingdom",
+    value: "Edinburgh, Scotland",
     href: "#",
   },
   {

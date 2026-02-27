@@ -25,7 +25,7 @@ export function UsaCompetitionHero() {
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           The SAGE United Kindom National Competition is where teenage
           entrepreneurs from across the country showcase their businesses and
-          compete for a chance to represent the United States at the prestigious
+          compete for a chance to represent the United Kingdom at the prestigious
           SAGE World Cup. Join us as we celebrate innovation, creativity, and
           real-world impact driven by young leaders.
         </p>

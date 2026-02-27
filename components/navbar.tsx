@@ -14,6 +14,7 @@ const competitionLinks = [
 ];
 
 const aboutLinks = [
+  { label: "About Us", href: "/about" },
   { label: "Our Mission", href: "/about#mission" },
   { label: "Our Team", href: "/about#team" },
   { label: "Sponsors", href: "/about#sponsors" },

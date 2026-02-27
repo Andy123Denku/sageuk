@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, GraduationCap, Briefcase } from "lucide-react";
+import { Users, GraduationCap, Briefcase, CheckCircle2 } from "lucide-react";
 
 const cards = [
   {
@@ -21,7 +21,7 @@ const cards = [
     number: 3,
     icon: Briefcase,
     title: "University Mentors",
-    description: "Supports sudents on their entrepreneurship journey",
+    description: "Supports students on their entrepreneurship journey",
     buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
   },
   {
@@ -31,6 +31,15 @@ const cards = [
     description: "Help us by volunteering to judge at our next competition!",
     buttons: [{ label: "Contact Us", href: "#", variant: "solid" as const }],
   },
+];
+
+const teamRequirements = [
+  "A 'team' of at least 3 teenagers is organized and creates a real, operating business.",
+  "The team can form within a class at their high school, an after-school program, within a community program, or on their own.",
+  "All teams must have an adult supervisor to participate in SAGE.",
+  "A school may have several SAGE teams, as long as each team has a sponsoring teacher, adult or sponsoring organization.",
+  "All businesses, including for-profit and non-profit, may compete in SAGE.",
+  '"Veteran" SAGE teams may re-enter its business for a period of two years.',
 ];
 
 export function GetInvolvedSection() {
@@ -52,7 +61,7 @@ export function GetInvolvedSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
             <div
               key={card.number}
@@ -97,6 +106,54 @@ export function GetInvolvedSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* How to Start a SAGE Team Section */}
+        <div className="mt-20">
+          <div className="rounded-2xl border border-border bg-background p-8 sm:p-12">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl font-bold text-foreground sm:text-4xl">
+                How to Start a SAGE Team in Your{" "}
+                <span className="text-primary">School/Community</span>
+              </h3>
+            </div>
+
+            {/* Intro paragraph */}
+            <div className="mb-10 rounded-xl bg-primary/5 p-6 border-l-4 border-primary">
+              <p className="text-base leading-relaxed text-muted-foreground">
+                The key to starting a team is to find an enthusiastic group of
+                teenage leaders who are interested in starting their own
+                business venture, along with an adult ally who is willing to
+                encourage and support their participation as a SAGE sponsor.
+                Once a group of teens has decided to participate, the ally who
+                becomes their adviser should register the team.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="#register"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:scale-105 hover:shadow-lg"
+                >
+                  Register Your Team
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Requirements grid */}
+            <div className="grid gap-4 md:grid-cols-2">
+              {teamRequirements.map((requirement, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 rounded-lg bg-secondary p-4 border border-border"
+                >
+                  <CheckCircle2 className="h-6 w-6 shrink-0 text-primary mt-0.5" />
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {requirement}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

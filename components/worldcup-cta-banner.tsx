@@ -9,7 +9,8 @@ export function WorldCupCtaBanner() {
         </h2>
         <div className="mt-8">
           <Link
-            href="/2025-wc"
+            href="https://docs.google.com/forms/u/2/d/1zI6yD14l4yPVQOxTYwUAi7j9Sll-SNUpzwg9_PlZdXw/edit"
+            target="_blank"
             className="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-xl"
           >
             2026 World Cup

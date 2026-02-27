@@ -22,7 +22,7 @@ export function HeroSection() {
         </h1>
         <div className="mt-10">
           <Link
-            href="#learn-more"
+            href="/about"
             className="inline-block rounded-lg bg-primary px-8 py-3.5 text-lg font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:scale-105"
           >
             Learn More

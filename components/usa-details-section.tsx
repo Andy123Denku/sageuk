@@ -22,7 +22,7 @@ const details = [
   },
   {
     icon: Trophy,
-    text: "Results for SAGE United Kindom will be announced on our Instagram page and this webpage on May 23.",
+    text: "Results for SAGE United Kingdom will be announced on our Instagram page and this webpage on May 23.",
   },
 ];
 

@@ -13,6 +13,12 @@ const teamMembers = [
     image: "/images/leadership/2.jpg",
     bio: "Since 2003 Carol has supported the SAGE Global team with attention to detail that has helped our organization achieve sustainable norms that continue to exceed expectations. Carol is responsible for global operations and ensuring that all of the systems, resources, and people are in place to achieve our goals.",
   },
+  {
+    name: "Chinenye Udeh",
+    role: "Country Director",
+    image: "/images/leadership/4.jpg",
+    bio: "With 15 years of long-standing engagement with Students for the Advancement of Global Entrepreneurship (SAGE) in Nigeria, Chinenye has contributed to building the next generation of entrepreneurial leaders and changemakers. Her work spans youth development, community service education, and tech-driven learning initiatives, blending visionary leadership with hands-on programme delivery.",
+  },
 ];
 const boardMembers = [
   {

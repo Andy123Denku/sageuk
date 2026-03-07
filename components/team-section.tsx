@@ -2,6 +2,12 @@ import Image from "next/image";
 
 const teamMembers = [
   {
+    name: "Curtis L DeBerg",
+    role: "Founder SAGE Global",
+    image: "/images/leadership/5.jpg",
+    bio: "",
+  },
+  {
     name: "Rob Best",
     role: "Chief Executive Officer",
     image: "/images/leadership/1.jpg",

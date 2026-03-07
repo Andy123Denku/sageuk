@@ -39,8 +39,12 @@ const inquiryTypes = [
   "Other",
 ];
 
+const FORMSPREE_FORM_ID = "YOUR_FORM_ID"; // 🔁 Replace with your Formspree form ID
+
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -58,10 +62,58 @@ export function ContactSection() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up to your backend / email service
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch(
+        'https://formspree.io/f/mzdjzpza',
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            firstName: form.firstName,
+            lastName: form.lastName,
+            email: form.email,
+            phone: form.phone,
+            inquiryType: form.inquiryType,
+            message: form.message,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json();
+        const errorMessage =
+          data?.errors?.map((err: { message: string }) => err.message).join(", ") ??
+          "Something went wrong. Please try again.";
+        setError(errorMessage);
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  function handleReset() {
+    setSubmitted(false);
+    setError(null);
+    setForm({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      inquiryType: "",
+      message: "",
+    });
   }
 
   return (
@@ -138,17 +190,7 @@ export function ContactSection() {
                     will be in touch with you within 2 business days.
                   </p>
                   <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setForm({
-                        firstName: "",
-                        lastName: "",
-                        email: "",
-                        phone: "",
-                        inquiryType: "",
-                        message: "",
-                      });
-                    }}
+                    onClick={handleReset}
                     className="mt-8 rounded-lg border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-all hover:border-primary/40 hover:shadow-md"
                   >
                     Send Another Message
@@ -285,6 +327,13 @@ export function ContactSection() {
                     />
                   </div>
 
+                  {/* Error message */}
+                  {error && (
+                    <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                      {error}
+                    </p>
+                  )}
+
                   {/* Submit */}
                   <div className="flex items-center justify-between gap-4 pt-2">
                     <p className="text-xs text-muted-foreground">
@@ -292,9 +341,10 @@ export function ContactSection() {
                     </p>
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
                     >
-                      Send Message
+                      {isSubmitting ? "Sending…" : "Send Message"}
                       <Send className="h-4 w-4" />
                     </button>
                   </div>

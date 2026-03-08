@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, Building2 } from "lucide-react";
+import { Send, CheckCircle } from "lucide-react";
 
 const sponsorshipTiers = ["Silver (£2,500/yr)", "Gold (£7,500/yr)", "Platinum (£15,000+/yr)", "Custom / In-Kind"];
 const organisationTypes = [
@@ -22,6 +22,8 @@ const contributionTypes = [
 
 export function SponsorshipFormSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -46,10 +48,56 @@ export function SponsorshipFormSection() {
     setForm((prev) => ({ ...prev, [e.target.name]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up to your backend / CRM / email service
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mzdjzpza", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json();
+        const errorMessage =
+          data?.errors
+            ?.map((err: { message: string }) => err.message)
+            .join(", ") ?? "Something went wrong. Please try again.";
+        setError(errorMessage);
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  function handleReset() {
+    setSubmitted(false);
+    setError(null);
+    setForm({
+      firstName: "",
+      lastName: "",
+      jobTitle: "",
+      organisation: "",
+      organisationType: "",
+      email: "",
+      phone: "",
+      website: "",
+      sponsorshipTier: "",
+      contributionType: "",
+      motivation: "",
+      additionalInfo: "",
+      agreeToContact: false,
+    });
   }
 
   return (
@@ -86,24 +134,7 @@ export function SponsorshipFormSection() {
                   within 3 business days.
                 </p>
                 <button
-                  onClick={() => {
-                    setSubmitted(false);
-                    setForm({
-                      firstName: "",
-                      lastName: "",
-                      jobTitle: "",
-                      organisation: "",
-                      organisationType: "",
-                      email: "",
-                      phone: "",
-                      website: "",
-                      sponsorshipTier: "",
-                      contributionType: "",
-                      motivation: "",
-                      additionalInfo: "",
-                      agreeToContact: false,
-                    });
-                  }}
+                  onClick={handleReset}
                   className="mt-8 rounded-lg border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-all hover:border-primary/40 hover:shadow-md"
                 >
                   Submit Another Application
@@ -314,15 +345,23 @@ export function SponsorshipFormSection() {
                     </span>
                   </label>
 
+                  {/* Error message */}
+                  {error && (
+                    <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                      {error}
+                    </p>
+                  )}
+
                   <div className="flex items-center justify-between gap-4">
                     <p className="text-xs text-muted-foreground">
                       <span className="text-primary">*</span> Required fields
                     </p>
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
                     >
-                      Submit Application
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                       <Send className="h-4 w-4" />
                     </button>
                   </div>

@@ -4,6 +4,7 @@ import { ContributeHero } from "@/components/contribute-hero";
 import { WhySponsorSection } from "@/components/why-sponsor-section";
 import { SponsorshipTiersSection } from "@/components/sponsorship-tiers-section";
 import { SponsorshipFormSection } from "@/components/sponsorship-form-section";
+import { UniversityPartnershipSection } from "@/components/university-partnership";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function ContributePage() {
       <main>
         <ContributeHero />
         <WhySponsorSection />
+        <UniversityPartnershipSection/>
         <SponsorshipTiersSection />
         <SponsorshipFormSection />
       </main>

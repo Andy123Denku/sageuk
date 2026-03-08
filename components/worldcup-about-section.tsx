@@ -47,6 +47,22 @@ export function WorldCupAboutSection() {
             );
           })}
         </div>
+
+        {/* Video Section */}
+        <div className="mt-16">
+          <div className="overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="/images/vid/1.mp4"
+                title="SAGE World Cup Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; mute: encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

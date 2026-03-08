@@ -26,9 +26,7 @@ export function ContributeHero() {
           <span className="text-primary">Future</span> of Entrepreneurship
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Your contribution — whether as a sponsor, donor, or partner — directly
-          funds programs that transform teenagers into confident, socially-conscious
-          entrepreneurs across the UK and beyond.
+          SAGE UK partners with organisations that believe in empowering young people through entrepreneurship, innovation, and leadership development.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link

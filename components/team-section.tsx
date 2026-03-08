@@ -28,9 +28,9 @@ const teamMembers = [
 ];
 const boardMembers = [
   {
-    name: "James Chen",
-    role: "Director of Programs",
-    image: "/images/team-3.jpg",
+    name: "Peter Fagen",
+    role: "Chairman of the Board",
+    image: "/images/leadership/6.jpg",
   },
 ];
 

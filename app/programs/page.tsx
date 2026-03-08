@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { ProgramsHero } from "@/components/programs-hero";
 import { ProgramsSection } from "@/components/programs-section";
+import { AmbassadorProgramSection } from "@/components/ambassador-program-section";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function ProgramsPage() {
       <main>
         <ProgramsHero />
         <ProgramsSection />
+        <AmbassadorProgramSection />
       </main>
       <Footer />
     </>

@@ -3,28 +3,31 @@ import { TrendingUp, Users, Globe, Award, Megaphone, Handshake } from "lucide-re
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Drive Social Impact",
+    title: "Support Youth Innovation and Education",
     description:
-      "Your investment directly funds real programs that equip teenagers with entrepreneurial skills to tackle pressing social challenges in their communities.",
-  },
-  {
-    icon: Users,
-    title: "Connect with Future Talent",
-    description:
-      "Get early access to the next generation of business leaders. Sponsors benefit from direct engagement with high-achieving, ambitious young entrepreneurs.",
-  },
-  {
-    icon: Globe,
-    title: "Global Brand Visibility",
-    description:
-      "SAGE UK operates across 30+ countries. Your brand is prominently featured at international competitions, events, and across our digital platforms.",
+      "Your partnership directly empowers teenagers with entrepreneurial skills, innovative thinking, and real-world business experience that transforms their futures and communities.",
   },
   {
     icon: Award,
-    title: "Recognition & Prestige",
+    title: "Strengthen Corporate Social Responsibility (CSR) Impact",
     description:
-      "Be recognised as a champion of youth entrepreneurship. Sponsorship places your organisation alongside world-class partners like EY, KPMG, and Microsoft.",
+      "Demonstrate your organization's commitment to education, youth development, and social impact through measurable, meaningful contributions to the next generation.",
   },
+  {
+    icon: Users,
+    title: "Engage with Future Talent and Leaders",
+    description:
+      "Get early access to the next generation of business leaders. Connect with high-achieving, ambitious young entrepreneurs who will shape tomorrow's economy.",
+  },
+  {
+    icon: Globe,
+    title: "Gain Brand Visibility at National Events",
+    description:
+      "Your brand receives prominent exposure at SAGE UK competitions, workshops, and events, reaching thousands of students, educators, and business leaders across the nation.",
+  },
+];
+
+const additionalBenefits = [
   {
     icon: Megaphone,
     title: "Marketing Opportunities",
@@ -87,16 +90,35 @@ export function WhySponsorSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Core Benefits - 2x2 Grid */}
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:shadow-lg"
+              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 sm:p-8 transition-all hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
-                <benefit.icon className="h-5 w-5 text-primary" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                <benefit.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-base font-bold text-foreground">{benefit.title}</h3>
+              <h3 className="text-lg font-bold text-foreground">{benefit.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Benefits - 2 Column Grid */}
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {additionalBenefits.map((benefit) => (
+            <div
+              key={benefit.title}
+              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 sm:p-8 transition-all hover:border-primary/40 hover:shadow-lg"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                <benefit.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground">{benefit.title}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {benefit.description}
               </p>
